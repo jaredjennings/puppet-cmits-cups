@@ -16,5 +16,6 @@
 # \section{CUPS (Common UNIX Printing System)}
 
 class cups {
-    include "${name}::${::osfamily}"
+    $lower_osfamily = downcase($::osfamily)
+    include "${name}::${lower_osfamily}"
 }

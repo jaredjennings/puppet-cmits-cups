@@ -28,7 +28,8 @@ class cups::no {
 # CUPS is \verb!/etc/cups/cupsd.conf!. This trivially prevents ``unauthorized
 # modifications'' or ``unauthorized remote access.''
 
-    include "cups::no::${::osfamily}"
+    $lower_osfamily = downcase($::osfamily)
+    include "cups::no::${lower_osfamily}"
     file { '/etc/cups/cupsd.conf':
         ensure => absent,
     }
