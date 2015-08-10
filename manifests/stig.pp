@@ -26,7 +26,7 @@
 class cups::stig {
 
 # First, make sure CUPS is installed and running.
-    include "cups::${::osfamily}"
+    include cups
 
 # \implements{unixsrg}{GEN003920,GEN003930,GEN003940}%
 # Control ownership and permissions of the ``hosts.lpd (or equivalent) file,''
