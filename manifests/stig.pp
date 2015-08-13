@@ -35,7 +35,7 @@ class cups::stig {
 # (This file has mode \verb!0640! by default, which is less permissive than the
 # required \verb!0664!.)
     file { "/etc/cups/cupsd.conf":
-        owner => root, group => 0, mode => 0640,
+        owner => root, group => 0, mode => '0640',
     }
 # \implements{unixsrg}{GEN003950}%
 # Remove extended ACLs on the same file.
